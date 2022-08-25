@@ -1,8 +1,10 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net"
+	"os"
 
 	pb "github.com/dineshr93/services/calculator/proto"
 
@@ -16,6 +18,15 @@ type Server struct {
 }
 
 func main() {
+	if len(os.Args) > 1 {
+		addr = os.Args[1]
+		// log.Println(number)
+
+		// do something with command
+	} else {
+		fmt.Println("Please provide one number as an argument")
+		os.Exit(1)
+	}
 	lis, err := net.Listen("tcp", addr)
 	if err != nil {
 		log.Fatalf("Failed to listen: %v\n", err)
