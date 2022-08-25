@@ -1,0 +1,12 @@
+syntax = "proto3";
+package calculator;
+option go_package = "github.com/dineshr93/services/calculator/proto";
+
+message SquareRequest {
+    double number = 1;
+}
+message SquareResponse {
+    double number = 1;
+}
+
+// protoc -Icalculator/proto --go_opt=module=github.com/dineshr93/services --go_out=. --go-grpc_opt=module=github.com/dineshr93/services --go-grpc_out=. calculator/proto/*.proto

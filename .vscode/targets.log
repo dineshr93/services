@@ -1,0 +1,488 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-pc-mingw32
+ 
+
+# �Make�-Datenbank; erstellt am: Thu Aug 25 09:41:14 2022
+
+# Variablen
+
+# automatisch
+<D = $(patsubst %/,%,$(dir $<))
+# automatisch
+?F = $(notdir $?)
+# Makefile (from `makefile', line 8)
+.SHELLFLAGS := -NoProfile -Command
+# Umgebung
+PROVIDE_FULLSTACK_ACTION = true
+# Makefile
+MAKEFLAGS = Rrqp
+# automatisch
+?D = $(patsubst %/,%,$(dir $?))
+# automatisch
+@D = $(patsubst %/,%,$(dir $@))
+# Umgebung
+HOMEDRIVE = H:
+# automatisch
+@F = $(notdir $@)
+# automatisch
+^D = $(patsubst %/,%,$(dir $^))
+# Makefile
+CURDIR := c 
+:/Users/dira271641/go/src/github.com/dineshr93/services
+# Makefile (from `makefile', line 7)
+SHELL := C:/WINDOWS/System32/WindowsPowerShell/v1.0//powershell.exe
+# Umgebung
+WINDIR = C:\WINDOWS
+# Umgebung
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# Umgebung
+VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
+# Umgebung
+ONEDRIVE = C:\Users\dira271641\OneDrive
+# Makefile (from `makefile', line 9)
+SHELL_VERSION = $(shell (Get-Host | Select-Object Version | Format-Table -HideTableHeaders | Out-String).Trim())
+# Umgebung
+MAVEN_HOME = D:\Training ppt\maven\apache-maven-3.8.1
+# Umgebung
+GITHUB_TOKEN = 15051513419f864bee59539ca2f026beead2acf8
+# Umgebung
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW
+# Makefile (from `makefile', line 1)
+MAKEFILE_LIST :=  makefile
+# Umgebung
+TMP = C:\Users\DIRA27~1\AppData\Local\Temp
+# Umgebung
+PROMPT = $P$G
+# Umgebung
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# Umgebung
+PROGRAMW6432 = C:\Program Files
+# Makefile (from `makefile', line 41)
+project := greet calculator blog
+# Umgebung
+PROGRAMDATA = C:\ProgramData
+# Makefile (from `makefile', line 11)
+PACKAGE = github.com/dineshr93/$(shell (Get-Content go.mod -head 1).Split(" ")[1])
+# Umgebung
+VSCODE_CWD = C:\Users\dira271641\AppData\Local\Programs\Microsoft VS Code
+# Umgebung
+GOPROXY = https://proxy.golang.org,direct
+# Umgebung
+PATH = D:\goworkspace\go\bin;C:\tools\ruby30\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Graphviz\bin;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\PuTTY\;C:\Users\dira271641\AppData\Local\Programs\Python\Python310;C:\Program Files (x86)\PDFtk\bin\;C:\Users\dira271641\AppData\Local\Programs\Python\Python310\Scripts;C:\Gradle\gradle-6.7\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files\Calibre2\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;D:\Training ppt\gradle\gradle-simple-master\gradle\wrapper;D:\Training ppt\maven\apache-maven-3.8.1\bin;C:\Users\dira271641\.poetry\bin;C:\Users\dira271641\.cargo\bin;D:\sw_tmp\ffmpeg-5.0.1-essentials_build\bin;C:\Users\dira271641\AppData\Local\Microsoft\WindowsApps;C:\Users\dira271641\go\src\Asterix_report;C:\Program Files\Graphviz\bin;C:\Users\dira271641\AppData\Local\Programs\Git\cmd;C:\Users\dira271641\AppData\Local\Programs\Python\Python310;C:\Users\dira271641\AppData\Local\Programs\Python\Python310\Scripts;C:\Users\dira271641\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\dira271641\AppData\Roaming\npm;C:\Users\dira271641\go\bin;D:\Training ppt\maven\apache-maven-3.8.1\bin;C:\kotlin-native-windows-x86_64-1.6.10\bin;C:\proto3\bin;D:\sw\thrift;C:\make-3.81-bin\bin;
+# Umgebung
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# Umgebung
+GOLANG_EXECUTABLE = go
+# Umgebung
+CHOCOLATEYLASTPATHUPDATE = 132612135523805345
+# Umgebung
+PROCESSOR_ARCHITECTURE = x86
+# Umgebung
+THREE_SCALE_USER_TOKEN = 207c527cfc2a6b8dcf4fa43ad7a976da
+# Umgebung
+USERPROFILE = C:\Users\dira271641
+# Umgebung
+CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
+# Umgebung
+DEFLOGDIR = C:\ProgramData\McAfee\Endpoint Security\Logs
+# Umgebung
+ALLUSERSPROFILE = C:\ProgramData
+# Umgebung
+GOPATH = C:\Users\dira271641\go
+# Makefile (from `makefile', line 12)
+CHECK_DIR_CMD = if (!(Test-Path $@)) { $$e = [char]27; Write-Error "$$e[31mDirectory $@ doesn't exist$${e}[0m" }
+# Makefile (from `makefile', line 13)
+HELP_CMD = Select-String "^[a-zA-Z_-]+:.*?## .*$$" "./Makefile" | Foreach-Object { $$_data = $$_.matches -split ":.*?## "; $$obj = New-Object PSCustomObject; Add-Member -InputObject $$obj -NotePropertyName ('Command') -NotePropertyValue $$_data[0]; Add-Member -InputObject $$obj -NotePropertyName ('Description') -NotePropertyValue $$_data[1]; $$obj } | Format-Table -HideTableHeaders @{Expression={ $$e = [char]27; "$$e[36m$$($$_.Command)$${e}[0m" }}, Description
+# Umgebung
+NUMBER_OF_PROCESSORS = 8
+# Umgebung
+ELECTRON_RUN_AS_NODE = 1
+# Makefile (from `makefile', line 4)
+CLIENT_DIR = client
+# Standard
+.FEATURES := target-specific order-only second-expansion else-if archives
+# Umgebung
+UUID = fdb61380-e893-45cf-bc6e-d50cb7e05437
+# automatisch
+%F = $(notdir $%)
+# Umgebung
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_13472_UDJRQIFRCHJMGHSN
+# Makefile (from `makefile', line 16)
+SERVER_BIN = ${SERVER_DIR}.exe
+# Makefile (from `makefile', line 2)
+PROTO_DIR = proto
+# Umgebung
+COMPUTERNAME = DEL00696
+# Umgebung
+PROGRAMFILES = C:\Program Files (x86)
+# Umgebung
+USERDNSDOMAIN = EBGROUP.ELEKTROBIT.COM
+# Umgebung
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# Umgebung
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# Umgebung
+USERNAME = dira271641
+# Umgebung
+PUBLIC = C:\Users\Public
+# Umgebung
+GOMODCACHE = C:\Users\dira271641\go\pkg\mod
+# Umgebung
+CHOCOLATEYTOOLSLOCATION = C:\tools
+# Umgebung
+VSCODE_CODE_CACHE_PATH = C:\Users\dira271641\AppData\Roaming\Code\CachedData\e4503b30fc78200f846c62cf8091b76ff5547662
+# Umgebung
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# Makefile (from `makefile', line 15)
+RM_RF_CMD = ${RM_F_CMD} -Recurse
+# Umgebung
+COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+# Umgebung
+LOGONSERVER = \\DEULM2DC011
+# Umgebung
+TELEMETRY_ID = 3a8df812-0e46-470b-b0dd-9a106afccc24
+# Umgebung
+M2_HOME = D:\Training ppt\maven\apache-maven-3.8.1
+# Umgebung
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# Umgebung
+USERDOMAIN = EBGROUP
+# Standard
+MAKE = $(MAKE_COMMAND)
+# Standard
+MAKECMDGOALS := all
+# Standard
+MAKE_VERSION := 3.81
+# Makefile (from `makefile', line 39)
+.DEFAULT_GOAL := help
+# Umgebung
+GOROOT = D:\goworkspace\go
+# Umgebung
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# automatisch
+%D = $(patsubst %/,%,$(dir $%))
+# Umgebung
+LOCALAPPDATA = C:\Users\dira271641\AppData\Local
+# Umgebung
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+# Standard
+MAKE_COMMAND := make.exe
+# Umgebung
+UTM_SOURCE = vscode
+# Umgebung
+PROCESSOR_ARCHITEW6432 = AMD64
+# Standard
+.VARIABLES := 
+# automatisch
+*F = $(notdir $*)
+# Umgebung
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
+# Makefile (from `makefile', line 10)
+OS = $(shell "{0} {1}" -f "windows", (Get-ComputerInfo -Property OsVersion, OsArchitecture | Format-Table -HideTableHeaders | Out-String).Trim())
+# Umgebung
+VSCODE_IPC_HOOK = \\.\pipe\25779102462ea5a73a1e5405089d78c3-1.70.2-main-sock
+# Umgebung
+HOMEPATH = \
+# Umgebung
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# Umgebung
+HOMESHARE = \\homes\homes_sec$\dira271641
+# Umgebung
+MFLAGS = -Rrqp
+# automatisch
+*D = $(patsubst %/,%,$(dir $*))
+# Umgebung
+SYSTEMROOT = C:\WINDOWS
+# automatisch
++D = $(patsubst %/,%,$(dir $+))
+# Umgebung
+RECOMMENDER_API_URL = https://gw.api.openshift.io//api/v2
+# automatisch
++F = $(notdir $+)
+# Umgebung
+APPDATA = C:\Users\dira271641\AppData\Roaming
+# Umgebung
+TEMP = C:\Users\DIRA27~1\AppData\Local\Temp
+# Umgebung
+COMSPEC = C:\WINDOWS\system32\cmd.exe
+# Makefile (from `makefile', line 3)
+SERVER_DIR = server
+# Standard
+MAKEFILES := 
+# automatisch
+<F = $(notdir $<)
+# Makefile (from `makefile', line 1)
+BIN_DIR = bin
+# Umgebung
+LC_ALL = C
+# automatisch
+^F = $(notdir $^)
+# Standard
+SUFFIXES := 
+# Umgebung
+SYSTEMDRIVE = C:
+# Umgebung
+SESSIONNAME = Console
+# Umgebung
+PROCESSOR_REVISION = 5e03
+# Umgebung
+MAKELEVEL := 0
+# Makefile (from `makefile', line 17)
+CLIENT_BIN = ${CLIENT_DIR}.exe
+# Makefile (from `makefile', line 14)
+RM_F_CMD = Remove-Item -erroraction silentlycontinue -Force
+# Umgebung
+LANG = C
+# Umgebung
+PROCESSOR_LEVEL = 6
+# Umgebung
+VSCODE_PID = 13472
+# Umgebung
+USERDOMAIN_ROAMINGPROFILE = EBGROUP
+# variable set hash-table stats:
+# Load=116/1024=11%, Rehash=0, Collisions=13/165=8%
+
+# Pattern-specific Variable Values
+
+# Keine musterspezifischen Variablenwerte.
+
+# Verzeichnisse
+
+# C:\Users\dira271641\AppData\Local\Programs\Python\Python310 (Schl�ssel (key) C:/Users/dira271641/AppData/Local/Programs/Python/Python310,  letzte �nderung (mtime) 1646564075): 20 Dateien, keine Unm�glichkeiten.
+# C:\WINDOWS\System32\WindowsPowerShell\v1.0\ (Schl�ssel (key) C:/WINDOWS/System32/WindowsPowerShell/v1.0/,  letzte �nderung (mtime) 1646163425): 32 Dateien, keine Unm�glichkeiten.
+# C:\WINDOWS\System32\Wbem (Schl�ssel (key) C:/WINDOWS/System32/Wbem,  letzte �nderung (mtime) 1660134768): 171 Dateien, keine Unm�glichkeiten.
+# C:\Program Files (x86)\PDFtk\bin\ (Schl�ssel (key) C:/Program Files (x86)/PDFtk/bin/,  letzte �nderung (mtime) 1603205268): 6 Dateien, keine Unm�glichkeiten.
+# D:\goworkspace\go\bin (Schl�ssel (key) D:/goworkspace/go/bin,  letzte �nderung (mtime) 1652201731): 4 Dateien, keine Unm�glichkeiten.
+# . (Schl�ssel (key) c:/Users/dira271641/go/src/github.com/dineshr93/services,  letzte �nderung (mtime) 1661413265): 7 Dateien, keine Unm�glichkeiten.
+# C:\Program Files\Calibre2\ (Schl�ssel (key) C:/Program Files/Calibre2/,  letzte �nderung (mtime) 1608496645): 24 Dateien, keine Unm�glichkeiten.
+# C:\Program Files\TortoiseSVN\bin (Schl�ssel (key) C:/Program Files/TortoiseSVN/bin,  letzte �nderung (mtime) 1605204154): 63 Dateien, keine Unm�glichkeiten.
+# C:\Gradle\gradle-6.7\bin (Schl�ssel (key) C:/Gradle/gradle-6.7/bin,  letzte �nderung (mtime) 318211200): 4 Dateien, keine Unm�glichkeiten.
+# C:\ProgramData\chocolatey\bin (Schl�ssel (key) C:/ProgramData/chocolatey/bin,  letzte �nderung (mtime) 1626797267): 14 Dateien, keine Unm�glichkeiten.
+# C:\Program Files\nodejs\ (Schl�ssel (key) C:/Program Files/nodejs/,  letzte �nderung (mtime) 1610563895): 11 Dateien, keine Unm�glichkeiten.
+# C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\ (Schl�ssel (key) C:/Program Files (x86)/Pulse Secure/VC142.CRT/X64/,  letzte �nderung (mtime) 1605629050): 10 Dateien, keine Unm�glichkeiten.
+# C:\Users\dira271641\AppData\Local\Programs\Python\Python310\Scripts (Schl�ssel (key) C:/Users/dira271641/AppData/Local/Programs/Python/Python310/Scripts,  letzte �nderung (mtime) 1660821091): 64 Dateien, keine Unm�glichkeiten.
+# C:\Users\dira271641\AppData\Roaming\npm (Schl�ssel (key) C:/Users/dira271641/AppData/Roaming/npm,  letzte �nderung (mtime) 1610565018): 12 Dateien, keine Unm�glichkeiten.
+# C:\proto3\bin (Schl�ssel (key) C:/proto3/bin,  letzte �nderung (mtime) 1660887535): 3 Dateien, keine Unm�glichkeiten.
+# C:\Users\dira271641\AppData\Local\Programs\Microsoft VS Code\bin (Schl�ssel (key) C:/Users/dira271641/AppData/Local/Programs/Microsoft VS Code/bin,  letzte �nderung (mtime) 1660800546): 4 Dateien, keine Unm�glichkeiten.
+# C:\WINDOWS\System32\OpenSSH\: Konnte den Status nicht feststellen.
+# C:\Program Files (x86)\Common Files\Oracle\Java\javapath (Schl�ssel (key) C:/Program Files (x86)/Common Files/Oracle/Java/javapath,  letzte �nderung (mtime) 1601367848): 5 Dateien, keine Unm�glichkeiten.
+# C:\tools\ruby30\bin (Schl�ssel (key) C:/tools/ruby30/bin,  letzte �nderung (mtime) 1617095204): 23 Dateien, keine Unm�glichkeiten.
+# D:\sw_tmp\ffmpeg-5.0.1-essentials_build\bin (Schl�ssel (key) D:/sw_tmp/ffmpeg-5.0.1-essentials_build/bin,  letzte �nderung (mtime) 1649319513): 5 Dateien, keine Unm�glichkeiten.
+# C:\Users\dira271641\.cargo\bin (Schl�ssel (key) C:/Users/dira271641/.cargo/bin,  letzte �nderung (mtime) 1656066836): 14 Dateien, keine Unm�glichkeiten.
+# C:\WINDOWS (Schl�ssel (key) C:/WINDOWS,  letzte �nderung (mtime) 1660759811): 130 Dateien, keine Unm�glichkeiten.
+# C:\Users\dira271641\AppData\Local\Programs\Git\cmd (Schl�ssel (key) C:/Users/dira271641/AppData/Local/Programs/Git/cmd,  letzte �nderung (mtime) 1603203930): 8 Dateien, keine Unm�glichkeiten.
+# C:\Users\dira271641\go\src\Asterix_report (Schl�ssel (key) C:/Users/dira271641/go/src/Asterix_report,  letzte �nderung (mtime) 1653908700): 17 Dateien, keine Unm�glichkeiten.
+# C:\Users\dira271641\AppData\Local\Microsoft\WindowsApps (Schl�ssel (key) C:/Users/dira271641/AppData/Local/Microsoft/WindowsApps,  letzte �nderung (mtime) 1659527756): 9 Dateien, keine Unm�glichkeiten.
+# C:\make-3.81-bin\bin (Schl�ssel (key) C:/make-3.81-bin/bin,  letzte �nderung (mtime) 1661413181): 5 Dateien, keine Unm�glichkeiten.
+# D:\Training ppt\gradle\gradle-simple-master\gradle\wrapper (Schl�ssel (key) D:/Training ppt/gradle/gradle-simple-master/gradle/wrapper,  letzte �nderung (mtime) 1607783293): 4 Dateien, keine Unm�glichkeiten.
+# D:\Training ppt\maven\apache-maven-3.8.1\bin (Schl�ssel (key) D:/Training ppt/maven/apache-maven-3.8.1/bin,  letzte �nderung (mtime) 1573126338): 8 Dateien, keine Unm�glichkeiten.
+# C:\Users\dira271641\go\bin (Schl�ssel (key) C:/Users/dira271641/go/bin,  letzte �nderung (mtime) 1661413113): 8 Dateien, keine Unm�glichkeiten.
+# D:\sw\thrift (Schl�ssel (key) D:/sw/thrift,  letzte �nderung (mtime) 1660913816): 5 Dateien, keine Unm�glichkeiten.
+# C:\WINDOWS\system32 (Schl�ssel (key) C:/WINDOWS/system32,  letzte �nderung (mtime) 1661231027): 2938 Dateien, keine Unm�glichkeiten.
+# C:\kotlin-native-windows-x86_64-1.6.10\bin (Schl�ssel (key) C:/kotlin-native-windows-x86_64-1.6.10/bin,  letzte �nderung (mtime) 318207600): 19 Dateien, keine Unm�glichkeiten.
+# C:\Program Files (x86)\PuTTY\ (Schl�ssel (key) C:/Program Files (x86)/PuTTY/,  letzte �nderung (mtime) 1602074431): 12 Dateien, keine Unm�glichkeiten.
+# C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\ (Schl�ssel (key) C:/Program Files (x86)/Pulse Secure/VC142.CRT/X86/,  letzte �nderung (mtime) 1605629050): 9 Dateien, keine Unm�glichkeiten.
+# C:\Program Files\Graphviz\bin (Schl�ssel (key) C:/Program Files/Graphviz/bin,  letzte �nderung (mtime) 1628601919): 58 Dateien, keine Unm�glichkeiten.
+# C:\Users\dira271641\.poetry\bin (Schl�ssel (key) C:/Users/dira271641/.poetry/bin,  letzte �nderung (mtime) 1660646171): 4 Dateien, keine Unm�glichkeiten.
+
+# 3730 Dateien, keine Unm�glichkeiten in 36 Verzeichnissen.
+
+# Implicit Rules
+
+# Keine impliziten Regeln vorhanden.
+
+# Dateien
+
+all: greet calculator blog
+#  Kommandozeilen-Ziel (target).
+#  Suche nach impliziten Regeln wurde durchgef�hrt.
+#  Die Datei existiert nicht.
+#  Datei wurde aktualisiert.
+#  Eine Aktualisierung ist notwendig (-q ist angegeben).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/21=0%
+
+.PHONY: greet blog calculator help
+#  Suche nac 
+h impliziten Regeln wurde nicht durchgef�hrt.
+#  Zeit der letzten �nderung wurde nicht �berpr�ft.
+#  Datei wurde nicht aktualisiert.
+
+# Dies ist kein Ziel:
+.DEFAULT:
+#  Suche nach impliziten Regeln wurde nicht durchgef�hrt.
+#  Zeit der letzten �nderung wurde nicht �berpr�ft.
+#  Datei wurde nicht aktualisiert.
+
+clean_greet:
+#  Suche nach impliziten Regeln wurde nicht durchgef�hrt.
+#  Zeit der letzten �nderung wurde nicht �berpr�ft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuf�hrende Kommandos (aus �makefile�, Zeile 66):
+	${RM_F_CMD} greet/${PROTO_DIR}/*.pb.go
+	
+
+bump: all
+#  Suche nach impliziten Regeln wurde nicht durchgef�hrt.
+#  Zeit der letzten �nderung wurde nicht �berpr�ft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuf�hrende Kommandos (aus �makefile�, Zeile 77):
+	go get -u ./...
+	
+
+rebuild: clean all
+#  Suche nach impliziten Regeln wurde nicht durchgef�hrt.
+#  Zeit der letzten �nderung wurde nicht �berpr�ft.
+#  Datei wurde nicht aktualisiert.
+
+test: all
+#  Suche nach impliziten Regeln wurde nicht durchgef�hrt.
+#  Zeit der letzten �nderung wurde nicht �berpr�ft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuf�hrende Kommandos (aus �makefile�, Zeile 56):
+	go test ./...
+	
+
+# Dies ist kein Ziel:
+makefile:
+#  Suche nach impliziten Regeln wurde durchgef�hrt.
+#  Zuletzt ge�ndert 2022-08-25 09:36:38
+#  Datei wurde aktualisiert.
+#  Erfolgreich aktualisiert.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+calculator:
+#  Vorget�uschtes Ziel (Voraussetzung von .PHONY).
+#  Suche nach impliziten Regeln wurde nicht durchgef�hrt.
+#  Die Datei existiert nicht.
+#  Datei wurde nicht aktualisiert.
+#  Auszuf�hrende Kommandos (aus �makefile�, Zeile 50):
+	@${CHECK_DIR_CMD}
+	protoc -I$@/${PROTO_DIR} --go_opt=module=${PACKAGE} --go_out=. --go-grpc_opt=module=${PACKAGE} --go-grpc_out=. $@/${PROTO_DIR}/*.proto
+	go build -o ${BIN_DIR}/$@/${SERVER_BIN} ./$@/${SERVER_DIR}
+	go build -o ${BIN_DIR}/$@/${CLIENT_BIN} ./$@/${CLIENT_DIR}
+	
+
+help:
+#  Vorget�uschtes Ziel (Voraussetzung von .PHONY).
+#  Suche nach impliziten Regeln wurde nicht durchgef�hrt.
+#  Die Datei existiert nicht.
+#  Datei wurde nicht aktualisiert.
+#  Auszuf�hrende Kommandos (aus �makefile�, Zeile 88):
+	@${HELP_CMD}
+	
+
+# Dies ist kein Ziel:
+.SUFFIXES:
+#  Suche nach impliziten Regeln wurde nicht durchgef�hrt.
+#  Zeit der letzten �nderung wurde nicht �berpr�ft.
+#  Datei wurde nicht aktualisiert.
+
+clean: clean_greet clean_calculator clean_blog
+#  Suche nach impliziten Regeln wurde nicht durchgef�hrt.
+#  Zeit der letzten �nderung wurde nicht �berpr�ft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuf�hrende Kommandos (aus �makefile�, Zeile 59):
+	${RM_F_CMD} ssl/*.crt
+	${RM_F_CMD} ssl/*.csr
+	${RM_F_CMD} ssl/*.key
+	${RM_F_CMD} ssl/*.pem
+	${RM_RF_CMD} ${BIN_DIR}
+	
+
+clean_calculator:
+#  Suche nach impliziten Regeln wurde nicht durchgef�hrt.
+#  Zeit der letzten �nderung wurde nicht �berpr�ft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuf�hrende Kommandos (aus �makefile�, Zeile 69):
+	${RM_F_CMD} calculator/${PROTO_DIR}/*.pb.go
+	
+
+about:
+#  Suche nach impliziten Regeln wurde nicht durchgef�hrt.
+#  Zeit der letzten �nderung wurde nicht �berpr�ft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuf�hrende Kommandos (aus �makefile�, Zeile 80):
+	@echo "OS: ${OS}"
+	@echo "Shell: ${SHELL} ${SHELL_VERSION}"
+	@echo "Protoc version: $(shell protoc --version)"
+	@echo "Go version: $(shell go version)"
+	@echo "Go package: ${PACKAGE}"
+	@echo "Openssl version: $(shell openssl version)"
+	
+
+greet:
+#  Vorget�uschtes Ziel (Voraussetzung von .PHONY).
+#  Suche nach impliziten Regeln wurde nicht durchgef�hrt.
+#  Ersetzung f�r implizites/statisches Muster: ��
+#  Die Datei existiert nicht.
+#  Datei wurde aktualisiert.
+#  Eine Aktualisierung ist notwendig (-q ist angegeben).
+# automatisch
+# @ := greet
+# automatisch
+# % := 
+# automatisch
+# * := 
+# automatisch
+# + := 
+# automatisch
+# | := 
+# automatisch
+# < := 
+# automatisch
+# ^ := 
+# automatisch
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/37=5%
+#  Auszuf�hrende Kommandos (aus �makefile�, Zeile 50):
+	@${CHECK_DIR_CMD}
+	protoc -I$@/${PROTO_DIR} --go_opt=module=${PACKAGE} --go_out=. --go-grpc_opt=module=${PACKAGE} --go-grpc_out=. $@/${PROTO_DIR}/*.proto
+	go build -o ${BIN_DIR}/$@/${SERVER_BIN} ./$@/${SERVER_DIR}
+	go build -o ${BIN_DIR}/$@/${CLIENT_BIN} ./$@/${CLIENT_DIR}
+	
+
+clean_blog:
+#  Suche nach impliziten Regeln wurde nicht durchgef�hrt.
+#  Zeit der letzten �nderung wurde nicht �berpr�ft.
+#  Datei wurde nicht aktualisiert.
+#  Auszuf�hrende Kommandos (aus �makefile�, Zeile 72):
+	${RM_F_CMD} blog/${PROTO_DIR}/*.pb.go
+	
+
+blog:
+#  Vorget�uschtes Ziel (Voraussetzung von .PHONY).
+#  Suche nach impliziten Regeln wurde nicht durchgef�hrt.
+#  Die Datei existiert nicht.
+#  Datei wurde nicht aktualisiert.
+#  Auszuf�hrende Kommandos (aus �makefile�, Zeile 50):
+	@${CHECK_DIR_CMD}
+	protoc -I$@/${PROTO_DIR} --go_opt=module=${PACKAGE} --go_out=. --go-grpc_opt=module=${PACKAGE} --go-grpc_out=. $@/${PROTO_DIR}/*.proto
+	go build -o ${BIN_DIR}/$@/${SERVER_BIN} ./$@/${SERVER_DIR}
+	go build -o ${BIN_DIR}/$@/${CLIENT_BIN} ./$@/${CLIENT_DIR}
+	
+
+# files hash-table stats:
+# Load=17/1024=2%, Rehash=0, Collisions=0/47=0%
+# VPATH-Suchpfade
+
+# Keine �vpath�-Suchpfade.
+
+# Kein allgemeiner Suchpfad (Variable �VPATH�).
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# �Make�-Datenbank; beendet am: Thu Aug 25 09:41:14 2022
+
+ 
