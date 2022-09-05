@@ -2,7 +2,10 @@ BIN_DIR = bin
 PROTO_DIR = proto
 SERVER_DIR = server
 CLIENT_DIR = client
-
+SERVER_BIN = ${SERVER_DIR}.exe
+CLIENT_BIN = ${CLIENT_DIR}.exe
+LSERVER_BIN = ${SERVER_DIR}
+LCLIENT_BIN = ${CLIENT_DIR}
 ifeq ($(OS), Windows_NT)
 	SHELL := powershell.exe
 	.SHELLFLAGS := -NoProfile -Command
@@ -13,8 +16,7 @@ ifeq ($(OS), Windows_NT)
 	HELP_CMD = Select-String "^[a-zA-Z_-]+:.*?\#\# .*$$" "./Makefile" | Foreach-Object { $$_data = $$_.matches -split ":.*?\#\# "; $$obj = New-Object PSCustomObject; Add-Member -InputObject $$obj -NotePropertyName ('Command') -NotePropertyValue $$_data[0]; Add-Member -InputObject $$obj -NotePropertyName ('Description') -NotePropertyValue $$_data[1]; $$obj } | Format-Table -HideTableHeaders @{Expression={ $$e = [char]27; "$$e[36m$$($$_.Command)$${e}[0m" }}, Description
 	RM_F_CMD = Remove-Item -erroraction silentlycontinue -Force
 	RM_RF_CMD = ${RM_F_CMD} -Recurse
-	SERVER_BIN = ${SERVER_DIR}.exe
-	CLIENT_BIN = ${CLIENT_DIR}.exe
+
 else
 	SHELL := bash
 	SHELL_VERSION = $(shell echo $$BASH_VERSION)
@@ -49,6 +51,12 @@ blog: $@ ## Generate Pbs and build for blog
 $(project):
 	@${CHECK_DIR_CMD}
 	protoc -I$@/${PROTO_DIR} --go_opt=module=${PACKAGE} --go_out=. --go-grpc_opt=module=${PACKAGE} --go-grpc_out=. $@/${PROTO_DIR}/*.proto
+	set GOOS=linux
+	set GOARCH=amd64
+	go build -o ${BIN_DIR}/$@/${LSERVER_BIN} ./$@/${SERVER_DIR}
+	go build -o ${BIN_DIR}/$@/${LCLIENT_BIN} ./$@/${CLIENT_DIR}
+	set GOOS=windows
+	set GOARCH=amd64
 	go build -o ${BIN_DIR}/$@/${SERVER_BIN} ./$@/${SERVER_DIR}
 	go build -o ${BIN_DIR}/$@/${CLIENT_BIN} ./$@/${CLIENT_DIR}
 
