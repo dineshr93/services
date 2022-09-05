@@ -7,7 +7,7 @@ import (
 	"strconv"
 
 	"google.golang.org/grpc"
-	"google.golang.org/grpc/credentials/insecure"
+	"google.golang.org/grpc/credentials"
 
 	pb "github.com/dineshr93/services/calculator/proto"
 )
@@ -24,11 +24,21 @@ func main() {
 
 		// do something with command
 	} else {
-		fmt.Println("Please provide one number as an argument")
+		fmt.Println("Please provide address and one number as an argument")
 		os.Exit(1)
 	}
+	tls := true
+	opts := []grpc.DialOption{}
+	if tls {
+		certFile := "ssl/ca.crt"
+		creds, err := credentials.NewClientTLSFromFile(certFile, "")
+		if err != nil {
+			log.Fatalf("Error while loading CA trust certificate:%v\n", err)
+		}
+		opts = append(opts, grpc.WithTransportCredentials(creds))
+	}
 
-	conn, err := grpc.Dial(addr, grpc.WithTransportCredentials(insecure.NewCredentials()))
+	conn, err := grpc.Dial(addr, opts...)
 	if err != nil {
 		log.Fatalf("Did not connect: %v\n", err)
 	}
