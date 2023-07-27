@@ -37,14 +37,22 @@ func main() {
 		}
 		opts = append(opts, grpc.WithTransportCredentials(creds))
 	}
-
+	
+	// 1. get the grpc connection by grpc dial the address
 	conn, err := grpc.Dial(addr, opts...)
 	if err != nil {
 		log.Fatalf("Did not connect: %v\n", err)
 	}
+	
+	//2. defer the close 
 	defer conn.Close()
+	
+	//3. get the particular client from the grpc connection
 	c := pb.NewCalculatorServiceClient(conn)
 
+	//4. Client contains the rpc method defined in the proto file
+	//c.Square
+	
 	// doSum(c)
 	// doPrimes(c)
 	// doAvg(c)
