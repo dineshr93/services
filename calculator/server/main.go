@@ -28,11 +28,7 @@ func main() {
 		fmt.Println("Please provide address as an argument")
 		// os.Exit(1)
 	}
-	lis, err := net.Listen("tcp", addr)
-	if err != nil {
-		log.Fatalf("Failed to listen: %v\n", err)
-	}
-	log.Printf("Listening at %s\n", addr)
+
 	opts := []grpc.ServerOption{}
 	tsl := true
 	if tsl {
@@ -45,8 +41,17 @@ func main() {
 		opts = append(opts, grpc.Creds(creds))
 
 	}
+	// 1. create new grpc server
 	s := grpc.NewServer(opts...)
+	// 2. Register your service with the created server
 	pb.RegisterCalculatorServiceServer(s, &Server{})
+	// 3. tcp listener
+	lis, err := net.Listen("tcp", addr)
+	if err != nil {
+		log.Fatalf("Failed to listen: %v\n", err)
+	}
+	log.Printf("Listening at %s\n", addr)
+	// 4. connect grpc server with tcp listener
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("Failed to serve: %v\n", err)
 	}
